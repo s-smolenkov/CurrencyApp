@@ -6,5 +6,7 @@ import retrofit2.http.Path
 
 interface ApiInterface {
     @GET("/v2/rates/{cryptoName}")
-    suspend fun getCryptoByName(@Path("cryptoName") name: String): Response<BitcoinResponse>
+    suspend fun getCryptoByName(
+        @Path("cryptoName") name: String
+    ): Response<BitcoinResponse>
 }
